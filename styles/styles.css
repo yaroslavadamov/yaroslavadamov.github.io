@@ -2,7 +2,7 @@
 :root {
   --transition-duration: .2s;
   --container-width-max: 1440px;
-  --container-width-min: 1280px;
+  --container-width-min: 375px;
   --image-hover-scale: 1.08;
   /* Primary colors */
   --color-primary-main: #4C4DDC;
@@ -171,6 +171,7 @@ button {
   border-radius: 6px;
   white-space: nowrap;
   cursor: pointer;
+  user-select: none;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -179,25 +180,31 @@ button {
   transition-property: background-color;
   transition-duration: var(--transition-duration);
 }
-.button_primary:hover {
-  background-color: var(--color-danger-hover);
-}
-.button_primary:active {
-  background-color: var(--color-danger-pressed);
+@media (hover: hover) {
+  .button_primary:hover {
+    background-color: var(--color-danger-hover);
+  }
+  .button_primary:active {
+    background-color: var(--color-danger-pressed);
+  }
 }
 .button_secondary {
   background-color: var(--color-neutral-90);
   border: 1px solid var(--color-neutral-80);
 }
-.button_secondary:hover {
-  background-color: var(--color-neutral-80);
+@media (hover: hover) {
+  .button_secondary:hover {
+    background-color: var(--color-neutral-80);
+  }
 }
 .button_outline {
   background-color: transparent;
   border: 1px solid var(--color-danger-main);
 }
-.button_outline:hover {
-  background-color: var(--color-neutral-90);
+@media (hover: hover) {
+  .button_outline:hover {
+    background-color: var(--color-neutral-90);
+  }
 }
 
 .trailer-info {
@@ -218,7 +225,7 @@ button {
   background-repeat: no-repeat;
   transition-property: transform;
   transition-duration: var(--transition-duration);
-  transition-timing-function: ease-out;
+  transition-timing-function: ease;
 }
 .cover div:hover {
   transform: scale(var(--image-hover-scale));
@@ -226,6 +233,7 @@ button {
 
 .container {
   max-width: var(--container-width-max);
+  min-width: var(--container-width-min);
   margin-inline: auto;
 }
 
@@ -483,6 +491,8 @@ body {
 
 .subscribe {
   position: relative;
+  width: min(var(--container-width-max), 100vw);
+  left: calc(-1 * (min(var(--container-width-max), 100vw) - 100%) / 2);
   padding-block: 120px;
   display: flex;
   flex-direction: column;

@@ -3,7 +3,7 @@
 :root {
 	--transition-duration: .2s;
 	--container-width-max: 1440px;
-	--container-width-min: 1280px;
+	--container-width-min: 375px;
 	--image-hover-scale: 1.08;
 
 	/* Primary colors */
@@ -183,6 +183,7 @@ button {
 	border-radius: 6px;
 	white-space: nowrap;
 	cursor: pointer;
+	user-select: none;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -192,12 +193,14 @@ button {
 	transition-duration: var(--transition-duration);
 
 	&_primary {
-		&:hover {
-			background-color: var(--color-danger-hover);
-		}
-
-		&:active {
-			background-color: var(--color-danger-pressed);
+		@media (hover: hover) {
+			&:hover {
+				background-color: var(--color-danger-hover);
+			}
+	
+			&:active {
+				background-color: var(--color-danger-pressed);
+			}
 		}
 	}
 
@@ -205,8 +208,10 @@ button {
 		background-color: var(--color-neutral-90);
 		border: 1px solid var(--color-neutral-80);
 
-		&:hover {
-			background-color: var(--color-neutral-80);
+		@media (hover: hover) {
+			&:hover {
+				background-color: var(--color-neutral-80);
+			}
 		}
 	}
 
@@ -214,8 +219,10 @@ button {
 		background-color: transparent;
 		border: 1px solid var(--color-danger-main);
 
-		&:hover {
-			background-color: var(--color-neutral-90);
+		@media (hover: hover) {
+			&:hover {
+				background-color: var(--color-neutral-90);
+			}
 		}
 	}
 }
@@ -240,7 +247,7 @@ button {
 		background-repeat: no-repeat;
 		transition-property: transform;
 		transition-duration: var(--transition-duration);
-		transition-timing-function: ease-out;
+		transition-timing-function: ease;
 
 		&:hover {
 			transform: scale(var(--image-hover-scale));
@@ -251,6 +258,7 @@ button {
 
 .container {
 	max-width: var(--container-width-max);
+	min-width: var(--container-width-min);
 	margin-inline: auto;
 }
 
@@ -544,6 +552,9 @@ body {
 
 .subscribe {
 	position: relative;
+	width: min(var(--container-width-max), 100vw);
+	// left: calc(-(min(var(--container-width-max), 100vw) - 100%) / 2);
+	left: calc(-1 * (min(var(--container-width-max), 100vw) - 100%) / 2);
 	padding-block: 120px;
 	display: flex;
 	flex-direction: column;
