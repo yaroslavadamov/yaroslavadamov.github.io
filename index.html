@@ -47,8 +47,9 @@
 
 			<div class="header__buttons">
 				<a href=""><div class="header__button-search"></div></a>
-				<button class="button button_primary" type="button">Subscribe</button>
-				<a href="" class="button button_outline">Sign In</a>
+				<button class="button button_primary header__button-subscribe" type="button">Subscribe</button>
+				<a href="" class="button button_outline header__button-sign-in">Sign In</a>
+				<button class="header__button-side-menu" type="button"></button>
 			</div>
 
 		</header>
@@ -66,7 +67,9 @@
 					<button class="button button_primary button-trailer" type="button">Watch Trailer <img src="icons/play-circle.svg"></button>
 					<a href="" class="button button_outline">More Info</a>
 				</div>
-				<img src="images/indicator-list.png" class="hero__content-indicator-list">
+				<div class="hero__content-indicator-list">
+					<img src="images/indicator-list.png" class="hero__content-indicator-list-temp">
+				</div>
 			</div>
 
 		</section>
@@ -93,71 +96,67 @@
 
 				<div class="movies">
 
-					<div class="movies__movies-row">
+					<ul class="movies__list">
 
-						<div class="movies__movie-card">
-							<a href="" class="movies__movie-card-cover cover"><div class="movie-1"></div></a>
-							<h3 class="movies__movie-card-title h4-inter semibold">Spectral Rivieerie</h3>
-							<p class="movies__movie-card-description h6-inter medium secondary">
+						<li class="movies__item">
+							<a href="" class="movies__item-cover cover"><div class="movie-1"></div></a>
+							<h3 class="movies__item-title h4-inter semibold">Spectral Rivieerie</h3>
+							<p class="movies__item-description h6-inter medium secondary">
 								A gifted artist discovers the ability to bring her dreams to life through her paintings, but soon realizes that the spectral beings...
 							</p>
 							<div class="trailer-info">
 								<button class="button button_primary button-trailer" type="button">Watch Trailer <img src="icons/play-circle.svg"></button>
 								<a href="" class="button button_outline">More Info</a>
 							</div>
-						</div>
+						</li>
 
-						<div class="movies__movie-card">
-							<a href="" class="movies__movie-card-cover cover"><div class="movie-2"></div></a>
-							<h3 class="movies__movie-card-title h4-inter semibold">Quantum Mirage</h3>
-							<p class="movies__movie-card-description h6-inter medium secondary">
+						<li class="movies__item">
+							<a href="" class="movies__item-cover cover"><div class="movie-2"></div></a>
+							<h3 class="movies__item-title h4-inter semibold">Quantum Mirage</h3>
+							<p class="movies__item-description h6-inter medium secondary">
 								A brilliant physicist stumbles upon a groundbreaking discovery that challenges the very fabric of reality. As the boundaries bet...
 							</p>
 							<div class="trailer-info">
 								<button class="button button_primary button-trailer" type="button">Watch Trailer <img src="icons/play-circle.svg"></button>
 								<a href="" class="button button_outline">More Info</a>
 							</div>
-						</div>
+						</li>
 
-					</div>
-
-					<div class="movies__movies-row">
-
-						<div class="movies__movie-card">
-							<a href="" class="movies__movie-card-cover cover"><div class="movie-3"></div></a>
-							<h3 class="movies__movie-card-title h4-inter semibold">Ephemeraal Echoes</h3>
-							<p class="movies__movie-card-description h6-inter medium secondary">
+						<li class="movies__item">
+							<a href="" class="movies__item-cover cover"><div class="movie-3"></div></a>
+							<h3 class="movies__item-title h4-inter semibold">Ephemeraal Echoes</h3>
+							<p class="movies__item-description h6-inter medium secondary">
 								In a world where memories are fleeting and time is a delicate illusion, a group...
 							</p>
 							<div class="trailer-info">
 								<button class="button button_primary button-trailer" type="button">Watch Trailer <img src="icons/play-circle.svg"></button>
 								<a href="" class="button button_outline">More Info</a>
 							</div>
-						</div>
+						</li>
 
-						<div class="movies__movie-card">
-							<a href="" class="movies__movie-card-cover cover"><div class="movie-4"></div></a>
-							<h3 class="movies__movie-card-title h4-inter semibold">Celestial Cipier</h3>
-							<p class="movies__movie-card-description h6-inter medium secondary">
+						<li class="movies__item">
+							<a href="" class="movies__item-cover cover"><div class="movie-4"></div></a>
+							<h3 class="movies__item-title h4-inter semibold">Celestial Cipier</h3>
+							<p class="movies__item-description h6-inter medium secondary">
 								In a realm where constellations hold the secrets of the universe, a group of unl...
 							</p>
 							<div class="trailer-info">
 								<button class="button button_primary button-trailer" type="button">Watch Trailer <img src="icons/play-circle.svg"></button>
 								<a href="" class="button button_outline">More Info</a>
 							</div>
-						</div>
+						</li>
 
-						<div class="movies__movie-card">
-							<a href="" class="movies__movie-card-cover cover"><div class="movie-5"></div></a>
-							<h3 class="movies__movie-card-title h4-inter semibold">Solaris Synchrony</h3>
-							<p class="movies__movie-card-description h6-inter medium secondary">
+						<li class="movies__item">
+							<a href="" class="movies__item-cover cover"><div class="movie-5"></div></a>
+							<h3 class="movies__item-title h4-inter semibold">Solaris Synchrony</h3>
+							<p class="movies__item-description h6-inter medium secondary">
 								Against the backdrop of a dying Earth, a group of scientists races to execute...
 							</p>
 							<div class="trailer-info">
 								<button class="button button_primary button-trailer" type="button">Watch Trailer <img src="icons/play-circle.svg"></button>
 								<a href="" class="button button_outline">More Info</a>
 							</div>
-						</div>
+						</li>
 
 					</div>
 
@@ -200,7 +199,7 @@
 					<li class="news__item">
 						<a href="">
 							<div class="news__item-cover cover"><div class="movie-3"></div></div>
-							<p class="h5-inter medium">
+							<p class="h5-inter no-adaptive medium">
 								In a world where memories are fleeting and time is a delicate illu...
 							</p>
 						</a>
@@ -209,7 +208,7 @@
 					<li class="news__item">
 						<a href="">
 							<div class="news__item-cover cover"><div class="movie-2"></div></div>
-							<p class="h5-inter medium">
+							<p class="h5-inter no-adaptive medium">
 								A brilliant physicist stumbles upon a groundbreaking discover...
 							</p>
 						</a>
@@ -218,7 +217,7 @@
 					<li class="news__item">
 						<a href="">
 							<div class="news__item-cover cover"><div class="movie-5"></div></div>
-							<p class="h5-inter medium">
+							<p class="h5-inter no-adaptive medium">
 								Against the backdrop of a dying Earth, a group of scientists race...
 							</p>
 						</a>
@@ -267,38 +266,31 @@
 					</p>
 				</div>
 
-				<nav class="footer__nav">
-					<ul class="footer__nav-columns">
-
-						<li class="footer__nav-column h6-inter medium">
-							<ul class="footer__nav-links">
-								<li class="footer__nav-link"><a href="">Home</a></li>
-								<li class="footer__nav-link"><a href="">Movies</a></li>
-								<li class="footer__nav-link"><a href="">TV Shows</a></li>
-								<li class="footer__nav-link"><a href="">Reedem</a></li>
-							</ul>
-						</li>
-
-						<li class="footer__nav-column h6-inter medium">
-							<ul class="footer__nav-links">
-								<li class="footer__nav-link"><a href="">About</a></li>
-								<li class="footer__nav-link"><a href="">Career</a></li>
-								<li class="footer__nav-link"><a href="">Investors</a></li>
-								<li class="footer__nav-link"><a href="">Contact Us</a></li>
-							</ul>
-						</li>
-
-						<li class="footer__nav-column h6-inter medium">
-							<ul class="footer__nav-links">
-								<li class="footer__nav-link"><a href="">FAQ</a></li>
-								<li class="footer__nav-link"><a href="">Help Center</a></li>
-								<li class="footer__nav-link"><a href="">Media Center</a></li>
-								<li class="footer__nav-link"><a href="">Cookie Preferences</a></li>
-							</ul>
-						</li>
-
+				<nav class="footer__nav-column">
+					<ul class="footer__nav-list h6-inter medium">
+						<li class="footer__nav-item"><a href="">Home</a></li>
+						<li class="footer__nav-item"><a href="">Movies</a></li>
+						<li class="footer__nav-item"><a href="">TV Shows</a></li>
+						<li class="footer__nav-item"><a href="">Reedem</a></li>
 					</ul>
+				</nav>
 
+				<nav class="footer__nav-column">
+					<ul class="footer__nav-list h6-inter medium">
+						<li class="footer__nav-item"><a href="">About</a></li>
+						<li class="footer__nav-item"><a href="">Career</a></li>
+						<li class="footer__nav-item"><a href="">Investors</a></li>
+						<li class="footer__nav-item"><a href="">Contact Us</a></li>
+					</ul>
+				</nav>
+
+				<nav class="footer__nav-column">
+					<ul class="footer__nav-list h6-inter medium">
+						<li class="footer__nav-item"><a href="">FAQ</a></li>
+						<li class="footer__nav-item"><a href="">Help Center</a></li>
+						<li class="footer__nav-item"><a href="">Media Center</a></li>
+						<li class="footer__nav-item"><a href="">Cookie Preferences</a></li>
+					</ul>
 				</nav>
 
 				<div class="footer__social">

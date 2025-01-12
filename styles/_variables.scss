@@ -1,0 +1,57 @@
+:root {
+	--transition-duration: .2s;
+	--container-width-max: 1440px;
+	--image-hover-scale: 1.08;
+	
+	/* Primary colors */
+	--color-primary-main: #4C4DDC;
+	--color-primary-surface: #F5F5FF;
+	--color-primary-border: #DFE0F3;
+	--color-primary-hover: #3334CC;
+	--color-primary-pressed: #085885;
+	--color-primary-focus: #4C4DDC33;
+
+	/* Secondary colors */
+	--color-secondary-main: #FFD33C;
+	--color-secondary-surface: #FFF6D8;
+	--color-secondary-border: #FFF0BE;
+	--color-secondary-hover: #D5B032;
+	--color-secondary-pressed: #806A1E;
+	--color-secondary-focus: #FFF6D8;
+
+	/* Success colors */
+	--color-success-main: #37C779;
+	--color-success-surface: #F2FFF8;
+	--color-success-border: #C5EED8;
+	--color-success-hover: #46B277;
+	--color-success-pressed: #224C36;
+	--color-success-focus: #50CD8933;
+
+	/* Danger colors */
+	--color-danger-main: #F14141;
+	--color-danger-surface: #FFF2F2;
+	--color-danger-border: #FAC0C0;
+	--color-danger-hover: #D93A3A;
+	--color-danger-pressed: #802A2A;
+	--color-danger-focus: #F1414133;
+
+	/* Info colors */
+	--color-info-main: #7239EA;
+	--color-info-surface: #F6F2FF;
+	--color-info-border: #D0BDF8;
+	--color-info-hover: #6633D1;
+	--color-info-pressed: #3F2478;
+	--color-info-focus: #7239EA33;
+
+	/* Neutral colors */
+	--color-neutral-10: #FFFFFF;
+	--color-neutral-20: #F5F5F5;
+	--color-neutral-30: #EDEDED;
+	--color-neutral-40: #D6D6D6;
+	--color-neutral-50: #C2C2C2;
+	--color-neutral-60: #878787;
+	--color-neutral-70: #606060;
+	--color-neutral-80: #383838;
+	--color-neutral-90: #242323;
+	--color-neutral-100: #101010;
+}

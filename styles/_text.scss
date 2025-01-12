@@ -1,0 +1,94 @@
+.h1-inter,
+.h2-inter,
+.h3-inter,
+.h4-inter,
+.h5-inter,
+.h6-inter,
+.p-inter-large,
+.p-inter-medium,
+.p-inter-small,
+.button {
+	color: var(--color-neutral-10);
+	font-family: 'Inter', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: -0.02em;
+}
+
+.h1-inter {
+	font-size: 64px;
+	line-height: 1.125;
+}
+
+.h2-inter {
+	font-size: 48px;
+	line-height: 1.166;
+}
+
+.h3-inter {
+	font-size: 40px;
+	line-height: 1.2;
+}
+
+.h4-inter {
+	font-size: 32px;
+	line-height: 1.25;
+}
+
+.h5-inter {
+	font-size: 25px;
+	line-height: 1.333;
+}
+
+.h6-inter {
+	font-size: 18px;
+	line-height: 1.444;
+}
+
+.p-inter-large,
+button {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.p-inter-medium {
+	font-size: 14px;
+	line-height: 1.428;
+}
+
+.p-inter-small {
+	font-size: 12px;
+	line-height: 1.333;
+}
+
+.medium {
+	font-weight: 500;
+}
+
+.semibold {
+	font-weight: 600;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.secondary {
+	color: var(--color-neutral-60);
+}
+
+@media (max-width: 980px) {
+	.h2-inter,
+	.h4-inter {
+		font-size: 25px;
+		line-height: 1.333;
+	}
+
+	.h5-inter:not(.no-adaptive),
+	.h6-inter,
+	.p-inter-large,
+	.button {
+		font-size: 14px;
+		line-height: 1.428;
+	}
+}
