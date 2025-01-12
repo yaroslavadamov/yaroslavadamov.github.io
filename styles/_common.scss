@@ -22,6 +22,11 @@ a {
 	text-decoration: none;
 }
 
+button,
+.button {
+	-webkit-tap-highlight-color: transparent;
+}
+
 
 .logo {
 	display: block;
@@ -62,10 +67,10 @@ a {
 			&:hover {
 				background-color: var(--color-danger-hover);
 			}
-	
-			&:active {
-				background-color: var(--color-danger-pressed);
-			}
+		}
+
+		&:active {
+			background-color: var(--color-danger-pressed);
 		}
 	}
 
@@ -78,6 +83,10 @@ a {
 				background-color: var(--color-neutral-80);
 			}
 		}
+
+		&:active {
+			background-color: var(--color-neutral-70);
+		}
 	}
 
 	&_outline {
@@ -88,6 +97,10 @@ a {
 			&:hover {
 				background-color: var(--color-neutral-90);
 			}
+		}
+
+		&:active {
+			background-color: var(--color-neutral-80);
 		}
 	}
 

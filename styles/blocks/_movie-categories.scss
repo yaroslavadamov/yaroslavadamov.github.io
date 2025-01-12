@@ -28,8 +28,10 @@
 			transition-property: color;
 			transition-duration: var(--transition-duration);
 	
-			&:hover {
-				color: var(--color-neutral-50);
+			@media (hover: hover) {
+				&:hover {
+					color: var(--color-neutral-50);
+				}
 			}
 		}
 	}
