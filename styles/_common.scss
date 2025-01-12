@@ -145,5 +145,7 @@ a {
 }
 
 body {
+	width: auto;
+	overflow-x: hidden;
 	background-color: var(--color-neutral-100);
 }
