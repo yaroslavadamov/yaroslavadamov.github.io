@@ -825,6 +825,11 @@ body {
   flex-direction: column;
   gap: 12px;
 }
+@media (hover: hover) {
+  .footer__nav-item a:hover {
+    text-decoration: underline;
+  }
+}
 .footer__social {
   width: 182px;
 }
@@ -846,9 +851,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
-.footer__social-item a:hover {
-  text-decoration: underline;
-}
 .footer__legal {
   display: flex;
   flex-direction: row;
@@ -866,8 +868,10 @@ body {
   justify-content: end;
   gap: 10px;
 }
-.footer__legal-links a:hover {
-  text-decoration: underline;
+@media (hover: hover) {
+  .footer__legal-links a:hover {
+    text-decoration: underline;
+  }
 }
 @media (max-width: 1310px) {
   .footer__content {
