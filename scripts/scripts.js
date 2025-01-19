@@ -54,6 +54,10 @@ movieList.push(new HeroMovie(
 	'hero-background_7.jpg'
 ));
 
+movieList.forEach(movie => {
+	new Image().src = movie.bgImage;
+});
+
 
 
 
