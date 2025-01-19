@@ -925,6 +925,11 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+@media (hover: hover) {
+  .footer__social-item:hover {
+    background-color: var(--color-neutral-80);
+  }
+}
 .footer__legal {
   display: flex;
   flex-direction: row;
