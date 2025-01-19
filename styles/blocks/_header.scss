@@ -32,11 +32,11 @@
 		transition-property: background-color;
 		transition-duration: var(--transition-duration);
 
-		&_current {
+		&.is-active {
 			background-color: #ffffff19;
 		}
 
-		&:not(.header__nav-item_current):hover {
+		&:not(.is-active):hover {
 			background-color: #ffffff10;
 		}
 
