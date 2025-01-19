@@ -405,13 +405,14 @@ body {
 .hero__background {
   width: 871px;
   height: 721px;
-  background-image: url("../images/hero-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
   z-index: -1;
   top: -76px;
   right: -100px;
+  transition: background-image 0.5s;
+  transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .hero__content {
   width: 604px;
@@ -419,20 +420,51 @@ body {
   flex-direction: column;
   align-items: start;
 }
+.hero__content-list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.hero__content-item {
+  flex: 0 0 100%;
+}
+.hero__content-item-anim {
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  animation-fill-mode: forwards;
+}
 .hero__content-title {
   margin-bottom: 24px;
+  user-select: none;
 }
 .hero__content-description {
   margin-bottom: 32px;
+  user-select: none;
 }
 .hero__content-indicator-list {
   display: flex;
   flex-direction: row;
+  gap: 8px;
   margin-top: 64px;
 }
-.hero__content-indicator-list-temp {
-  display: block;
+.hero__content-indicator-item {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-neutral-80);
+  border-radius: 4px;
+  transition-property: width, background-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
   cursor: pointer;
+}
+.hero__content-indicator-item-active {
+  width: 59px;
+  background-color: var(--color-danger-main);
+}
+@media (hover: hover) {
+  .hero__content-indicator-item:not(.hero__content-indicator-item-active):hover {
+    background-color: var(--color-neutral-70);
+  }
 }
 @media (max-width: 1350px) {
   .hero__background {
@@ -476,6 +508,32 @@ body {
   }
 }
 
+@keyframes hero-item-hide {
+  from {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+}
+@keyframes hero-item-show {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .main__title {
   max-width: 788px;
   text-align: center;

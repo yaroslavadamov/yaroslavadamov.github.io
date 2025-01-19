@@ -7,13 +7,14 @@
 	&__background {
 		width: 871px;
 		height: 721px;
-		background-image: url("../images/hero-background.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 		position: absolute;
 		z-index: -1;
 		top: -76px;
 		right: -100px;
+		transition: background-image .5s;
+		transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
 	}
 
 	&__content {
@@ -22,22 +23,60 @@
 		flex-direction: column;
 		align-items: start;
 
+		&-list {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+		}
+
+		&-item {
+			flex: 0 0 100%;
+
+			&-anim {
+				animation-duration: .5s;
+				animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+				animation-fill-mode: forwards;
+			}
+		}
+
 		&-title {
 			margin-bottom: 24px;
+			user-select: none;
 		}
 
 		&-description {
 			margin-bottom: 32px;
+			user-select: none;
 		}
 
-		&-indicator-list {
-			display: flex;
-			flex-direction: row;
-			margin-top: 64px;
+		&-indicator {
+			&-list {
+				display: flex;
+				flex-direction: row;
+				gap: 8px;
+				margin-top: 64px;
+			}
 
-			&-temp {
-				display: block;
+			&-item {
+				width: 8px;
+				height: 8px;
+				background-color: var(--color-neutral-80);
+				border-radius: 4px;
+				transition-property: width, background-color;
+				transition-duration: .3s;
+				transition-timing-function: ease-in-out;
 				cursor: pointer;
+
+				&-active {
+					width: 59px;
+					background-color: var(--color-danger-main);
+				}
+
+				@media (hover: hover) {
+					&:not(&-active):hover {
+						background-color: var(--color-neutral-70);
+					}
+				}
 			}
 		}
 	}
@@ -85,5 +124,38 @@
 
 	@media (max-width: 425px) {
 		margin-bottom: 40px;
+	}
+}
+
+
+@keyframes hero-item-hide {
+	from {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+
+	70% {
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(-50px);
+		opacity: 0;
+	}
+}
+
+@keyframes hero-item-show {
+	from {
+		transform: translateX(50px);
+		opacity: 0;
+	}
+
+	30% {
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
 	}
 }
