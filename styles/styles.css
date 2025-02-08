@@ -327,6 +327,9 @@ button,
 .about-me__content-text.placeholder {
   visibility: hidden;
 }
+.about-me__content-text-cursor {
+  user-select: none;
+}
 .about-me__content-text-cursor.blink {
   animation: cursor-blinking 2s ease infinite;
 }

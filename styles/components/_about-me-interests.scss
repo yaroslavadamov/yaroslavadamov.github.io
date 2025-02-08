@@ -43,8 +43,12 @@
 				visibility: hidden;
 			}
 
-			&-cursor.blink {
-				animation: cursor-blinking 2s ease infinite;
+			&-cursor {
+				user-select: none;
+				
+				&.blink {
+					animation: cursor-blinking 2s ease infinite;
+				}
 			}
 		}
 	}
