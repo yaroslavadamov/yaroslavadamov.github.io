@@ -29,11 +29,42 @@
 			}
 		}
 
+		&-text-wrapper {
+			display: flex;
+			flex-direction: row;
+		}
+
 		&-text {
+			flex: none;
+			width: 100%;
 			padding-bottom: 22px;
+
+			&.placeholder {
+				visibility: hidden;
+			}
+
+			&-cursor.blink {
+				animation: cursor-blinking 2s ease infinite;
+			}
 		}
 	}
 }
+
+@keyframes cursor-blinking {
+	from {
+		opacity: 1;
+	}
+
+	25%,
+	50% {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
 
 .interests {
 	&__title {
