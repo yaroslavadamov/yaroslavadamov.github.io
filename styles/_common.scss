@@ -1,0 +1,60 @@
+.visually-hidden {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	margin: -1px !important;
+	border: 0 !important;
+	padding: 0 !important;
+	white-space: nowrap !important;
+	clip-path: inset(100%) !important;
+	clip: rect(0 0 0 0) !important;
+	overflow: hidden !important;;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	transition-property: color, background-color, fill;
+	transition-duration: var(--color-mode-transition-duration);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	width: auto;
+	overflow-x: hidden;
+	background-color: var(--color-bg-main);
+}
+
+.container {
+	max-width: var(--container-width-max);
+	margin-inline: auto;
+	padding-inline: 100px;
+
+	@media (max-width: 1280px) {
+		padding-inline: 6.4%;
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+button,
+.button {
+	-webkit-tap-highlight-color: transparent;
+}
+
+.light-mode {
+	color-scheme: light;
+}
+
+.dark-mode {
+	color-scheme: dark;
+}

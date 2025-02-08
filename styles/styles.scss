@@ -1,0 +1,16 @@
+@use "variables";
+@use "text";
+@use "common";
+@use "components/header";
+@use "components/color-mode-switcher";
+@use "components/bricks-list";
+@use "components/hero";
+@use "components/about-me-interests";
+@use "components/skills";
+@use "components/portfolio";
+@use "components/work-experience";
+@use "components/chronology";
+@use "components/education";
+@use "components/contacts";
+@use "components/footer";
+@import url("normalize.css");

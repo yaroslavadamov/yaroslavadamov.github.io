@@ -1,0 +1,21 @@
+.skills {
+	margin-bottom: 90px;
+
+	&__title {
+		margin-bottom: 28px;
+	}
+
+	&__list {
+		margin-bottom: 28px;
+	}
+
+	&__soft-skills {
+		padding: 16px 26px;
+		border: 1px solid var(--color-text-main);
+		border-radius: 24px;
+
+		&-title {
+			margin-bottom: 8px;
+		}
+	}
+}

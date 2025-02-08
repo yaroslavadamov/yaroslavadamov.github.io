@@ -1,0 +1,31 @@
+:root {
+	--container-width-max: 1440px;
+
+	/* Colors - Light mode */
+	--color-bg-main-l: #F7F7F7;
+	--color-bg-accent-l: #FFFFFF;
+	--color-text-main-l: #262626;
+	--color-text-secondary-l: #B7B7B7;
+	--color-text-link-l: #0A7EC7;
+
+	/* Colors - Dark mode */
+	--color-bg-main-d: #1F1F1F;
+	--color-bg-accent-d: #1C1C1C;
+	--color-text-main-d: #F7F7F7;
+	--color-text-secondary-d: #626262;
+	--color-text-link-d: #5BBAF4;
+
+	// Colors
+	--color-bg-main: light-dark(var(--color-bg-main-l), var(--color-bg-main-d));
+	--color-bg-accent: light-dark(var(--color-bg-accent-l), var(--color-bg-accent-d));
+	--color-text-main: light-dark(var(--color-text-main-l), var(--color-text-main-d));
+	--color-text-secondary: light-dark(var(--color-text-secondary-l), var(--color-text-secondary-d));
+	--color-text-link: light-dark(var(--color-text-link-l), var(--color-text-link-d));
+
+	--color-mode-transition-duration: .4s;
+
+	color-scheme: light;
+	@media (prefers-color-scheme: dark) {
+		color-scheme: dark;
+	}
+}

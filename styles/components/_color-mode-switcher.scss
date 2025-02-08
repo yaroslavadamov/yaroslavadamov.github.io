@@ -1,0 +1,52 @@
+.color-mode-switcher__body {
+	position: relative;
+	width: 90px;
+	height: 42px;
+	border: 1px solid var(--color-text-main);
+	border-radius: 24px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding-inline: 10px;
+
+	&:after {
+		content: "";
+		position: absolute;
+		width: 42px;
+		height: 42px;
+		border-radius: 50%;
+		left: -1px;
+		top: -1px;
+		z-index: -1;
+		background: var(--color-text-main);
+		transition-property: transform, width;
+		transition-duration: var(--color-mode-transition-duration);
+	}
+
+	&.is-active:after {
+		transform: translateX(48px);
+	}
+
+	@media (hover: hover) {
+		&:hover:after {
+			width: 48px;
+		}
+	
+		&.is-active:hover:after {
+			transform: translateX(42px);
+		}
+	}
+
+	svg {
+		path {
+			fill: var(--color-bg-main);
+		}
+
+		&.invert-color path {
+			fill: var(--color-text-main);
+		}
+	}
+}
+

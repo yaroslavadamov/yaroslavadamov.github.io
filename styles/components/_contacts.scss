@@ -1,0 +1,21 @@
+.contacts {
+	margin-bottom: 90px;
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&__item {
+		svg path {
+			fill: var(--color-text-main);
+		}
+
+		a {
+			@media (hover: hover) {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

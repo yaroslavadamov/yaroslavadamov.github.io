@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+.h1,
+.h2,
+.h3,
+.p,
+.p-small {
+	font-family: 'PT Mono', monospace;
+	font-style: normal;
+	font-weight: 400;
+	color: var(--color-text-main);
+
+	&.secondary {
+		color: var(--color-text-secondary)
+	}
+
+	&.invert-color {
+		color: var(--color-bg-main);
+	}
+}
+
+.h1 {
+	font-size: 96px;
+}
+
+.h2 {
+	font-size: 32px;
+}
+
+.h3 {
+	font-size: 21px;
+}
+
+.p {
+	font-size: 18px;
+	line-height: 22px;
+}
+
+.p-small {
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.a {
+	color: var(--color-text-link);
+
+	@media (hover: hover) {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

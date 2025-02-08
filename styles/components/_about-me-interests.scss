@@ -1,0 +1,73 @@
+.about-me-interests {
+	display: flex;
+	flex-direction: row;
+	gap: 104px;
+	margin-bottom: 90px;
+}
+
+.about-me {
+	max-width: 665px;
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: row;
+		align-items: stretch;
+		gap: 24px;
+
+		&-line-numbers {
+			width: 11px;
+			flex: none;
+			position: relative;
+			overflow: hidden;
+
+			div {
+				position: absolute;
+			}
+		}
+
+		&-text {
+			padding-bottom: 22px;
+		}
+	}
+}
+
+.interests {
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&__list {
+		max-width: 404px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 16px;
+	}
+
+	&__item {
+		width: 48px;
+		height: 48px;
+		border: 1px solid var(--color-text-main);
+		border-radius: 24px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+
+		svg path {
+			fill: var(--color-text-main);
+		}
+
+		&.music {
+			padding-bottom: 3px;
+		}
+
+		&.cooking {
+			padding-top: 1px;
+		}
+	}
+}
