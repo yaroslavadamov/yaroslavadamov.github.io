@@ -1,8 +1,19 @@
+@use "../media";
+
 .about-me-interests {
 	display: flex;
 	flex-direction: row;
 	gap: 104px;
 	margin-bottom: 90px;
+
+	@include media.screen-medium {
+		margin-bottom: 70px;
+	}
+
+	@media (max-width: 950px) {
+		flex-direction: column;
+		gap: 70px;
+	}
 }
 
 .about-me {
@@ -32,6 +43,7 @@
 		&-text-wrapper {
 			display: flex;
 			flex-direction: row;
+			overflow-x: hidden;
 		}
 
 		&-text {
@@ -49,6 +61,25 @@
 				&.blink {
 					animation: cursor-blinking 2s ease infinite;
 				}
+			}
+		}
+	}
+
+	@media (max-width: 1080px) {
+		&__content {
+			&-line-numbers {
+				text-align: right;
+				width: 22px;
+			}
+		}
+	}
+
+	@include media.screen-medium {
+		&__content {
+			gap: 16px;
+
+			&-line-numbers {
+				width: 20px;
 			}
 		}
 	}
@@ -71,6 +102,8 @@
 
 
 .interests {
+	min-width: 180px;
+
 	&__title {
 		margin-bottom: 24px;
 	}
@@ -103,6 +136,12 @@
 
 		&.cooking {
 			padding-top: 1px;
+		}
+	}
+
+	@media (max-width: 950px) {
+		&__list {
+			max-width: none;
 		}
 	}
 }

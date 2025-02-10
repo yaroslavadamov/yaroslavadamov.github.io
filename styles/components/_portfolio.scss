@@ -1,3 +1,5 @@
+@use "../media";
+
 .portfolio {
 	margin-bottom: 90px;
 
@@ -56,6 +58,10 @@
 			padding-top: 16px;
 			gap: 8px;
 
+			&-title {
+				width: 100%;
+			}
+
 			&-text {
 				flex-grow: 1;
 			}
@@ -73,6 +79,53 @@
 					&:hover {
 						text-decoration: underline;
 					}
+				}
+			}
+		}
+	}
+
+	@include media.screen-medium {
+		margin-bottom: 70px;
+
+		&__title {
+			margin-bottom: 30px;
+		}
+
+		&__list {
+			gap: 60px;
+			max-width: 800px;
+		}
+
+		&__item {
+			&-cover {
+				max-width: 350px;
+			}
+
+			&-description {
+				&-button {
+					height: 50px;
+					padding-inline: 24px;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 800px) {
+		&__item {
+			flex-direction: column;
+			gap: 16px;
+
+			&-cover {
+				width: auto;
+			}
+
+			&-description {
+				padding: 0 16px;
+				align-items: flex-end;
+				max-width: 350px;
+
+				&-text {
+					margin-bottom: 2px;
 				}
 			}
 		}

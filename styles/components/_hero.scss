@@ -1,3 +1,5 @@
+@use "../media";
+
 .hero {
 	position: relative;
 	padding-top: 100px;
@@ -24,6 +26,8 @@
 		width: 327px;
 		aspect-ratio: 1 / 1;
 		background-image: url("../media/images/profile-picture.jpg");
+		background-size: cover;
+		background-position: center;
 		border-radius: 50%;
 		outline: 8px solid var(--color-bg-accent);
 	}
@@ -36,10 +40,19 @@
 
 	&__title {
 		margin-bottom: 15px;
+
+		&-indent {
+			&-first-line {
+				display: none;
+			}
+		}
 	}
 
 	&__subtitle {
 		margin-bottom: 30px;
+		display: inline-flex;
+		flex-direction: row;
+		gap: 12px;
 	}
 
 	&__resume {
@@ -61,6 +74,127 @@
 
 		svg path {
 			fill: var(--color-bg-main);
+		}
+	}
+
+	@media (max-width: 1240px) {
+		gap: 12px;
+		width: fit-content;
+		padding-inline: 0;
+		margin-inline: auto;
+		padding-top: 80px;
+		padding-bottom: 120px;
+
+		&__bg-circle {
+			width: 426px;
+			top: 54px;
+			left: 109px;
+		}
+
+		&__profile-picture {
+			margin-top: 26px;
+		}
+
+		&__title {
+			text-align: right;
+			margin-bottom: 22px;
+
+			&-indent {
+				&-first-line {
+					display: inline;
+				}
+
+				&-second-line {
+					display: none;
+				}
+			}
+		}
+
+		&__subtitle {
+			flex-direction: column;
+			text-align: right;
+		}
+	}
+
+	@include media.screen-medium {
+		gap: 30px;
+		padding-top: 60px;
+
+		&__bg-circle {
+			width: 390px;
+			top: 34px;
+			left: 75px;
+		}
+
+		&__profile-picture {
+			margin-top: 18px;
+			width: 260px;
+		}
+
+		&__resume {
+			padding: 16px 36px;
+			gap: 21px;
+
+			svg {
+				height: 26px;
+			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		align-items: center;
+		gap: 16px;
+		padding-top: 40px;
+		padding-bottom: 90px;
+
+		&__bg-circle {
+			width: 275px;
+			top: 60px;
+			left: 50px;
+		}
+
+		&__profile-picture {
+			width: 200px;
+			margin-top: 0;
+			outline-width: 4px;
+		}
+
+		&__content-wrapper {
+			align-items: center;
+		}
+
+		&__title {
+			text-align: center;
+			margin-bottom: 8px;
+
+			br {
+				display: none;
+			}
+		}
+
+		&__subtitle {
+			text-align: center;
+			flex-direction: row;
+			margin-bottom: 24px;
+		}
+	}
+
+	@media (max-width: 640px) {
+		padding-bottom: 75px;
+
+		&__bg-circle {
+			width: 196px;
+			top: 75px;
+			left: 0;
+		}
+
+		&__profile-picture {
+			width: 138px;
+		}
+
+		&__subtitle {
+			flex-direction: column;
 		}
 	}
 }

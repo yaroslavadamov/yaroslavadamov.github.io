@@ -1,3 +1,5 @@
+@use "../media";
+
 .chronology {
 	&__item {
 		margin-bottom: 36px;
@@ -26,6 +28,14 @@
 			&:before {
 				content: ">"
 			}
+		}
+	}
+
+	@include media.screen-medium {
+		&__item {
+			margin-bottom: 40px;
+			flex-direction: column;
+			gap: 16px;
 		}
 	}
 }

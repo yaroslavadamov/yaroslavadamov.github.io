@@ -1,3 +1,5 @@
+@use "../media";
+
 .contacts {
 	margin-bottom: 90px;
 
@@ -15,6 +17,24 @@
 				&:hover {
 					text-decoration: underline;
 				}
+			}
+		}
+	}
+
+	@include media.screen-medium {
+		margin-bottom: 70px;
+
+		&__title {
+			margin-bottom: 28px;
+		}
+
+		&__item {
+			&.email svg {
+				height: 18px;
+			}
+
+			&.telegram svg {
+				width: 23px;
 			}
 		}
 	}

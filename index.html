@@ -39,6 +39,13 @@
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M6.2666 0.111713C7.28442 -0.344387 8.16621 0.685918 7.84779 1.58049C6.76737 4.61589 7.43119 8.06344 9.67381 10.3052C11.9278 12.5584 15.3982 13.2206 18.4434 12.1208C19.3295 11.8008 20.3319 12.6739 19.8938 13.6675C19.8808 13.6969 19.8677 13.7261 19.8546 13.7555C19.0749 15.4844 17.8277 17.1104 16.2141 18.2006C14.4942 19.3625 12.4659 19.9833 10.3901 19.9833H10.3891C7.97529 19.9807 5.63747 19.1387 3.77645 17.6019C1.91542 16.065 0.647098 13.9288 0.188997 11.5594C-0.269105 9.19008 0.11157 6.73527 1.26573 4.61578C2.35988 2.6065 4.19975 1.04507 6.23667 0.125169L6.2666 0.111713Z" fill="white"/>
 				</svg>
 			</label>
+			<button type="button" class="header__burger-button">
+				<svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M0 7C0 6.44772 0.447715 6 1 6H17C17.5523 6 18 6.44772 18 7C18 7.55228 17.5523 8 17 8H1C0.447715 8 0 7.55228 0 7Z" fill="white"/>
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M0 1C0 0.447715 0.447715 0 1 0H17C17.5523 0 18 0.447715 18 1C18 1.55228 17.5523 2 17 2H1C0.447715 2 0 1.55228 0 1Z" fill="white"/>
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M0 13C0 12.4477 0.447715 12 1 12H17C17.5523 12 18 12.4477 18 13C18 13.5523 17.5523 14 17 14H1C0.447715 14 0 13.5523 0 13Z" fill="white"/>
+				</svg>
+			</button>
 		</header>
 
 		<main class="main container">
@@ -48,8 +55,11 @@
 				<div class="hero__profile-picture"></div>
 				<div class="hero__content-wrapper">
 					<h1 class="visually-hidden">Ярослав Адамов</h1>
-					<p class="hero__title h1">Ярослав<br>&nbsp;&nbsp;&nbsp;&nbsp;Адамов</p>
-					<p class="hero__subtitle h3">frontend-developer / 27 лет / Санкт-Петербург</p>
+					<span class="hero__title h1">Ярослав<span class="hero__title-indent-first-line">&nbsp;</span><br><span class="hero__title-indent-second-line">&nbsp;&nbsp;&nbsp;&nbsp;</span>Адамов</span>
+					<span class="hero__subtitle h3">
+						<span>frontend-developer</span>
+						<span>/ 27 лет / Санкт-Петербург</span>
+					</span>
 					<a href="" class="hero__resume h3 invert-color">
 						<span class="h3 invert-color">скачать резюме<br>в формате pdf</span>
 						<svg width="28" height="36" viewBox="0 0 28 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -262,7 +272,7 @@
 					<li class="portfolio__item">
 						<a href="portfolio/mostream/mostream.html" target="_blank" class="portfolio__item-cover"><div class="mostream"></div></a>
 						<div class="portfolio__item-description">
-							<p class="h3">Practice</p>
+							<p class="portfolio__item-description-title h3">Practice</p>
 							<p class="portfolio__item-description-text p">HTML, CSS, JavaScript, вёрстка по готовому макету, адаптивная вёрстка.</p>
 							<a href="portfolio/mostream/mostream.html" target="_blank" class="portfolio__item-description-button h3">Visit ></a>
 						</div>
@@ -356,18 +366,18 @@
 						<svg width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M19.7037 16.6801L19.007 17.3726C19.007 17.3726 17.3513 19.019 12.8318 14.5252C8.31244 10.0314 9.96815 8.38513 9.96815 8.38513L10.4068 7.94895C11.4875 6.87448 11.5893 5.1494 10.6464 3.89003L8.71795 1.31389C7.55103 -0.244834 5.29618 -0.450739 3.95869 0.879149L1.55812 3.26609C0.894938 3.92552 0.450521 4.78032 0.504417 5.72859C0.642294 8.15457 1.73991 13.3743 7.86469 19.4643C14.3597 25.9224 20.454 26.179 22.9462 25.9467C23.7344 25.8733 24.4199 25.4718 24.9723 24.9224L27.145 22.7623C28.6116 21.304 28.198 18.804 26.3216 17.784L23.3996 16.1956C22.1675 15.5259 20.6666 15.7225 19.7037 16.6801Z" fill="white"/>
 						</svg>
-						<a href="tel:+79657960602" class="p">+7 (965) 796-06-02</span>
+						<a href="tel:+79657960602" class="p">+7 (965) 796-06-02</a>
 					</li>
-					<li class="contacts__item bricks-item">
+					<li class="contacts__item bricks-item email">
 						<svg width="35" height="24" viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M2.39937 0.505576C12.1532 0.493962 21.907 0.505576 31.6607 0.540411C31.9424 0.54827 32.1978 0.629554 32.4271 0.784256C27.5839 5.29079 22.7302 9.7845 17.8661 14.2654C17.4666 14.5885 17.0253 14.6582 16.5424 14.4744C11.5516 9.92502 6.58187 5.35008 1.633 0.749421C1.88809 0.638471 2.14355 0.557188 2.39937 0.505576Z" fill="white"/>
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.100264 2.73501C3.54407 5.8418 6.95787 8.98852 10.3417 12.1753C7.00818 15.4276 3.66402 18.6673 0.309274 21.8942C0.164855 21.635 0.0835709 21.3563 0.0654289 21.0582C0.00791635 14.9485 0.0195303 8.84082 0.100264 2.73501Z" fill="white"/>
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M33.8902 2.73501C33.9405 2.76414 33.9753 2.81054 33.9947 2.87435C34.0412 8.93564 34.0412 14.9969 33.9947 21.0582C33.9766 21.3563 33.8953 21.635 33.7508 21.8942C30.4281 18.6411 27.1071 15.3898 23.788 12.1405C27.1709 9.02098 30.5383 5.88584 33.8902 2.73501Z" fill="white"/>
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M12.0835 13.8822C12.1568 13.8718 12.2265 13.8834 12.2925 13.917C13.203 14.8278 14.1552 15.6871 15.149 16.4948C16.7464 17.3131 18.2327 17.1506 19.6078 16.0071C20.351 15.3104 21.0941 14.6137 21.8373 13.917C21.907 13.8706 21.9766 13.8706 22.0463 13.917C25.2976 17.0754 28.5488 20.2338 31.8001 23.3921C26.8865 23.4733 21.9632 23.5081 17.0301 23.4967C12.13 23.4735 7.2298 23.4502 2.3297 23.427C5.58241 20.2439 8.83367 17.0623 12.0835 13.8822Z" fill="white"/>
 						</svg>
-						<a href="mailto:adamovyaroslav@gmail.com" class="p">adamovyaroslav@gmail.com</span>
+						<a href="mailto:adamovyaroslav@gmail.com" class="p">adamovyaroslav@gmail.com</a>
 					</li>
-					<li class="contacts__item bricks-item">
+					<li class="contacts__item bricks-item telegram">
 						<svg width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M25.6424 0.539246C25.6424 0.539246 28.2326 -0.470755 28.0168 1.98211C27.9448 2.99212 27.2973 6.52712 26.7936 10.3507L25.0668 21.6772C25.0668 21.6772 24.923 23.3365 23.6278 23.6251C22.3327 23.9136 20.3901 22.6151 20.0303 22.3265C19.7425 22.1101 14.6341 18.8636 12.8353 17.2765C12.3316 16.8436 11.756 15.9779 12.9072 14.9679L20.462 7.75359C21.3254 6.88786 22.1888 4.86785 18.5913 7.32072L8.51828 14.1743C8.51828 14.1743 7.36708 14.8957 5.20861 14.2465L0.531822 12.8036C0.531822 12.8036 -1.19499 11.7215 1.75498 10.6393C8.95001 7.24852 17.7999 3.78565 25.6424 0.539246Z" fill="white"/>
 						</svg>

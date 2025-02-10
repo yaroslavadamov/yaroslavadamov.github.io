@@ -1,0 +1,12 @@
+$screen-medium: 1024px;
+
+@mixin screen-medium {
+	@media (max-width: $screen-medium) {
+		@content;
+	}
+}
+
+
+@mixin aaa {
+	font-size: 5px;
+}

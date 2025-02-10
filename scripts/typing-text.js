@@ -12,13 +12,13 @@ textField.textContent = text.slice(0, index);
 textTypingElem.classList.remove('placeholder');
 textOriginalElem.before(textTypingElem);
 
-const delay = 30;
+const delay = 90;
 
 function type() {
 	if (index < text.length) {
 		textField.textContent += text[index++];
 
-		setTimeout(type, Math.floor(delay * 3 * Math.random()));
+		setTimeout(type, Math.floor(delay * Math.random()));
 	} else {
 		cursor.classList.add('blink');
 	}
