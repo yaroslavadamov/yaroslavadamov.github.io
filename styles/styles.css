@@ -118,7 +118,7 @@
 .a {
   color: var(--color-text-link);
 }
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .a:hover {
     text-decoration: underline;
   }
@@ -200,7 +200,7 @@ button,
   flex-direction: row;
   gap: 24px;
 }
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .header__menu-link:hover {
     text-decoration: underline;
   }
@@ -256,7 +256,7 @@ button,
 .color-mode-switcher__body.is-active:after {
   transform: translateX(48px);
 }
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .color-mode-switcher__body:hover:after {
     width: 48px;
   }
@@ -357,7 +357,7 @@ button,
   border-radius: 80px;
   text-align: center;
 }
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .hero__resume:hover {
     text-decoration: underline;
   }
@@ -651,7 +651,7 @@ button,
   background-position: center;
   background-repeat: no-repeat;
 }
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .portfolio__item-cover div {
     transition-property: transform;
     transition-duration: 0.2s;
@@ -686,7 +686,7 @@ button,
   background-color: var(--color-text-main);
   border-radius: 30px;
 }
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .portfolio__item-description-button:hover {
     text-decoration: underline;
   }
@@ -793,7 +793,7 @@ button,
 .contacts__item svg path {
   fill: var(--color-text-main);
 }
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .contacts__item a:hover {
     text-decoration: underline;
   }

@@ -35,7 +35,7 @@
 				background-position: center;
 				background-repeat: no-repeat;
 		
-				@media (hover: hover) {
+				@media (hover: hover) and (pointer: fine) {
 					transition-property: transform;
 					transition-duration: .2s;
 					transition-timing-function: ease;
@@ -75,7 +75,7 @@
 				background-color: var(--color-text-main);
 				border-radius: 30px;
 
-				@media (hover: hover) {
+				@media (hover: hover) and (pointer: fine) {
 					&:hover {
 						text-decoration: underline;
 					}

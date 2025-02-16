@@ -27,7 +27,7 @@
 		}
 
 		&-item {
-			@media (hover: hover) {
+			@media (hover: hover) and (pointer: fine) {
 				a:hover {
 					text-decoration: underline;
 				}
@@ -58,7 +58,7 @@
 			background-repeat: no-repeat;
 			background-position: center;
 
-			@media (hover:hover) {
+			@media (hover: hover) and (pointer: fine) {
 				&:hover {
 					background-color: var(--color-neutral-80);
 				}
@@ -84,7 +84,7 @@
 			justify-content: end;
 			gap: 10px;
 
-			@media (hover: hover) {
+			@media (hover: hover) and (pointer: fine) {
 				a:hover {
 					text-decoration: underline;
 				}

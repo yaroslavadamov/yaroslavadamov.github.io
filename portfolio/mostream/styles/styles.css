@@ -206,7 +206,7 @@ button,
   transition-property: background-color;
   transition-duration: var(--transition-duration);
 }
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .button_primary:hover {
     background-color: var(--color-danger-hover);
   }
@@ -218,7 +218,7 @@ button,
   background-color: var(--color-neutral-90);
   border: 1px solid var(--color-neutral-80);
 }
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .button_secondary:hover {
     background-color: var(--color-neutral-80);
   }
@@ -230,7 +230,7 @@ button,
   background-color: transparent;
   border: 1px solid var(--color-danger-main);
 }
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .button_outline:hover {
     background-color: var(--color-neutral-90);
   }
@@ -268,7 +268,7 @@ button,
   background-position: center;
   background-repeat: no-repeat;
 }
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .cover div {
     transition-property: transform;
     transition-duration: var(--transition-duration);
@@ -461,7 +461,7 @@ body {
   width: 59px;
   background-color: var(--color-danger-main);
 }
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .hero__content-indicator-item:not(.hero__content-indicator-item-active):hover {
     background-color: var(--color-neutral-70);
   }
@@ -574,7 +574,7 @@ body {
   transition-property: color;
   transition-duration: var(--transition-duration);
 }
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .movie-categories__item:not(.is-active):hover {
     color: var(--color-neutral-50);
     background-color: var(--color-neutral-80);
@@ -900,7 +900,7 @@ body {
   flex-direction: column;
   gap: 12px;
 }
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .footer__nav-item a:hover {
     text-decoration: underline;
   }
@@ -926,7 +926,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .footer__social-item:hover {
     background-color: var(--color-neutral-80);
   }
@@ -948,7 +948,7 @@ body {
   justify-content: end;
   gap: 10px;
 }
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .footer__legal-links a:hover {
     text-decoration: underline;
   }

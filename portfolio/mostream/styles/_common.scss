@@ -63,7 +63,7 @@ button,
 	transition-duration: var(--transition-duration);
 
 	&_primary {
-		@media (hover: hover) {
+		@media (hover: hover) and (pointer: fine) {
 			&:hover {
 				background-color: var(--color-danger-hover);
 			}
@@ -78,7 +78,7 @@ button,
 		background-color: var(--color-neutral-90);
 		border: 1px solid var(--color-neutral-80);
 
-		@media (hover: hover) {
+		@media (hover: hover) and (pointer: fine) {
 			&:hover {
 				background-color: var(--color-neutral-80);
 			}
@@ -93,7 +93,7 @@ button,
 		background-color: transparent;
 		border: 1px solid var(--color-danger-main);
 
-		@media (hover: hover) {
+		@media (hover: hover) and (pointer: fine) {
 			&:hover {
 				background-color: var(--color-neutral-90);
 			}
@@ -134,7 +134,7 @@ button,
 		background-position: center;
 		background-repeat: no-repeat;
 
-		@media (hover: hover) {
+		@media (hover: hover) and (pointer: fine) {
 			transition-property: transform;
 			transition-duration: var(--transition-duration);
 			transition-timing-function: ease;
