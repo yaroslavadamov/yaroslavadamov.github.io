@@ -18,7 +18,7 @@ function type() {
 	if (index < text.length) {
 		textField.textContent += text[index++];
 
-		setTimeout(type, Math.floor(delay * Math.random()));
+		setTimeout(type, Math.max(4, Math.floor(delay * Math.random())));
 	} else {
 		cursor.classList.add('blink');
 	}
