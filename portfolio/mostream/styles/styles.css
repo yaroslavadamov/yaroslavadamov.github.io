@@ -499,7 +499,7 @@ body {
 @media (max-width: 620px) {
   .hero__background {
     left: -6.4vw;
-    opacity: 0.15;
+    opacity: 0.22;
   }
 }
 @media (max-width: 425px) {
