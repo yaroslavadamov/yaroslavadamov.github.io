@@ -1008,28 +1008,23 @@ body {
   background-image: url(../icons/social-tiktok.svg);
 }
 
-/* .trailer {
-	position: fixed;
-	inset: 0;
-	background-color: rgba(0, 0, 0, .65);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	visibility: hidden;
+.trailer-dialog {
+  margin: auto;
+  width: min(1280px, min(80vw, 142.2222222222vh));
+  border: none;
+  background-color: transparent;
+  padding: 10px;
+  overflow: visible;
 }
-
-.trailer__popup {
-	padding: 25px 30px;
-	width: min(1280px, min(80vw, 80vh * 16 / 9));
-	border-radius: 10px;
+.trailer-dialog video {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--color-neutral-80);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
 }
-
-.trailer__popup video{
-	display: block;
-	width: 100%;
-	border-radius: 10px;
-	border: 1px solid var(--color-neutral-80);
-	box-shadow: 0 5px 10px rgba(0, 0, 0, .7);
-} */
+.trailer-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}
 
 /*# sourceMappingURL=styles.css.map */

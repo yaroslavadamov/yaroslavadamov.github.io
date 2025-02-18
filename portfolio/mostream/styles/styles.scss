@@ -8,29 +8,5 @@
 @use "blocks/news";
 @use "blocks/subscribe";
 @use "blocks/footer";
+@use "blocks/trailer-dialog";
 @import url("normalize.css");
-
-
-/* .trailer {
-	position: fixed;
-	inset: 0;
-	background-color: rgba(0, 0, 0, .65);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	visibility: hidden;
-}
-
-.trailer__popup {
-	padding: 25px 30px;
-	width: min(1280px, min(80vw, 80vh * 16 / 9));
-	border-radius: 10px;
-}
-
-.trailer__popup video{
-	display: block;
-	width: 100%;
-	border-radius: 10px;
-	border: 1px solid var(--color-neutral-80);
-	box-shadow: 0 5px 10px rgba(0, 0, 0, .7);
-} */
