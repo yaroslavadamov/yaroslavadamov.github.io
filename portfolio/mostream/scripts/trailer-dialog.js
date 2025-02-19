@@ -11,6 +11,7 @@ function trailerDialog() {
 
 	const trailerVideoElem = trailerDialogElem.firstElementChild;
 
+
 	// Open trailer
 	watchTrailerButtonElemList.forEach((buttonElem) => {
 		buttonElem.addEventListener('click', () => {

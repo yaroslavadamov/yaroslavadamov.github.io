@@ -1,3 +1,5 @@
+// Movie data
+
 const imageDirectoryURL = './images/';
 
 class HeroMovie {
@@ -58,16 +60,18 @@ movieList.forEach(movie => {
 
 
 
+// Functionality
 function hero() {
 	const contentListElem = document.querySelector(".hero__content-list");
-	if (contentListElem === null) {
-		return;
-	}
 	const contentItems = [];
 	const indicatorListElem = document.querySelector(".hero__content-indicator-list");
 	const indicatorItems = [];
 	const backgroundElem = document.querySelector(".hero__background");
+	if (contentListElem === null || indicatorListElem === null || backgroundElem === null) {
+		return;
+	}
 
+	// Content creation
 	for (let i = 0; i < movieList.length; i++) {
 		const item = document.createElement('div');
 		item.classList.add('hero__content-item');
@@ -81,11 +85,13 @@ function hero() {
 	
 		const indicator = document.createElement('div');
 		indicator.classList.add('hero__content-indicator-item');
+		indicator.setAttribute('data-index', i);
 		indicatorListElem.append(indicator);
 		indicatorItems.push(indicator);
 	}
 
 
+	// Hero animation
 	let movieIndex = 0;
 	let timeout;
 	contentItems[0].style.opacity = '1';
@@ -113,6 +119,14 @@ function hero() {
 	}
 
 	timeout = setTimeout(nextMovie, 1000);
+
+
+	// Indicator functionality
+	indicatorItems.forEach(indicator => {
+		indicator.addEventListener('click', () => {
+			setMovieIndex(+indicator.getAttribute('data-index'));
+		})
+	});
 }
 
 export { hero };
