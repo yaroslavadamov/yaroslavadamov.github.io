@@ -24,6 +24,13 @@ function trailerDialog() {
 	trailerDialogElem.addEventListener('cancel', () => {
 		trailerVideoElem.pause();
 	});
+
+	trailerDialogElem.addEventListener('click', (event) => {
+		if (event.target != trailerVideoElem) {
+			trailerDialogElem.close();
+			trailerVideoElem.pause();
+		}
+	})
 }
 
 export { trailerDialog };

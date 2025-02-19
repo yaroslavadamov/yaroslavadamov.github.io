@@ -1009,22 +1009,25 @@ body {
 }
 
 .trailer-dialog {
-  margin: auto;
-  width: min(1280px, min(80vw, 142.2222222222vh));
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   background-color: transparent;
-  padding: 10px;
-  overflow: visible;
 }
 .trailer-dialog video {
   display: block;
-  width: 100%;
+  width: min(1280px, min(80vw, 142.2222222222vh));
   border-radius: 10px;
-  border: 1px solid var(--color-neutral-80);
+  border: 1px solid var(--color-danger-main);
+  background-color: black;
+  padding: 12px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
 }
 .trailer-dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /*# sourceMappingURL=styles.css.map */
