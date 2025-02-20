@@ -16,6 +16,7 @@ function trailerDialog() {
 	watchTrailerButtonElemList.forEach((buttonElem) => {
 		buttonElem.addEventListener('click', () => {
 			trailerDialogElem.showModal();
+			trailerVideoElem.currentTime = 0;
 			trailerVideoElem.play();
 		});
 	});
