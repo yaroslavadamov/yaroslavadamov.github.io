@@ -54,7 +54,7 @@ movieList.push(new HeroMovie(
 	'hero-background_7.jpg'
 ));
 
-movieList.forEach(movie => {
+movieList.forEach((movie) => {
 	new Image().src = movie.backgroundImage;
 });
 
@@ -122,7 +122,7 @@ function hero() {
 
 
 	// Indicator functionality
-	indicatorItems.forEach(indicator => {
+	indicatorItems.forEach((indicator) => {
 		indicator.addEventListener('click', () => {
 			setMovieIndex(+indicator.getAttribute('data-index'));
 		})

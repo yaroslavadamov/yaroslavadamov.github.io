@@ -19,6 +19,7 @@
   --color-text-main: light-dark(var(--color-text-main-l), var(--color-text-main-d));
   --color-text-secondary: light-dark(var(--color-text-secondary-l), var(--color-text-secondary-d));
   --color-text-link: light-dark(var(--color-text-link-l), var(--color-text-link-d));
+  --color-mobile-overlay-bg: #000000bb;
   --color-mode-transition-duration: .4s;
   color-scheme: light;
 }
@@ -269,6 +270,41 @@ button,
 }
 .color-mode-switcher__body svg.invert-color path {
   fill: var(--color-text-main);
+}
+
+.mobile-overlay-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  visibility: hidden;
+}
+.mobile-overlay-container .mobile-overlay {
+  --width: 250px;
+  width: var(--width);
+  height: 100%;
+  background-color: var(--color-bg-main);
+  position: absolute;
+  right: calc(-1 * var(--width));
+  transition-property: right;
+  transition-duration: var(--color-mode-transition-duration);
+  padding: 48px 30px;
+}
+.mobile-overlay-container .mobile-overlay__menu-item {
+  margin-bottom: 24px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .mobile-overlay-container .mobile-overlay__menu-link:hover {
+    text-decoration: underline;
+  }
+}
+.mobile-overlay-container.is-open {
+  background-color: var(--color-mobile-overlay-bg);
+}
+.mobile-overlay-container.is-open .mobile-overlay {
+  right: 0;
 }
 
 .bricks-list {

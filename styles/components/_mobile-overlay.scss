@@ -1,0 +1,43 @@
+.mobile-overlay-container {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	visibility: hidden;
+
+	.mobile-overlay {
+		--width: 250px;
+		width: var(--width);
+		height: 100%;
+		background-color: var(--color-bg-main);
+		position: absolute;
+		right: calc(-1 * var(--width));
+		transition-property: right;
+		transition-duration: var(--color-mode-transition-duration);
+		padding: 48px 30px;
+
+		&__menu {
+			&-item {
+				margin-bottom: 24px;
+			}
+
+			&-link {
+				@media (hover: hover) and (pointer: fine) {
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+
+	&.is-open {
+		background-color: var(--color-mobile-overlay-bg);
+
+		.mobile-overlay {
+			right: 0;
+		}
+	}
+}
