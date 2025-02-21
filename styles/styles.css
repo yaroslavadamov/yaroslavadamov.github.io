@@ -209,7 +209,7 @@ button,
 .header__burger-button {
   display: none;
 }
-@media (max-width: 750px) {
+@media (max-width: 760px) {
   .header__menu-list {
     display: none;
   }
