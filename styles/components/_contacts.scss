@@ -11,14 +11,6 @@
 		svg path {
 			fill: var(--color-text-main);
 		}
-
-		a {
-			@media (hover: hover) and (pointer: fine) {
-				&:hover {
-					text-decoration: underline;
-				}
-			}
-		}
 	}
 
 	@include media.screen-medium {

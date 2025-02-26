@@ -66,12 +66,6 @@
 		border-radius: 80px;
 		text-align: center;
 
-		@media (hover: hover) and (pointer: fine) {
-			&:hover {
-				text-decoration: underline;
-			}
-		}
-
 		svg path {
 			fill: var(--color-bg-main);
 		}

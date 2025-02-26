@@ -16,6 +16,7 @@
 	padding: 0;
 	transition-property: color, background-color, fill, outline-color;
 	transition-duration: var(--color-mode-transition-duration);
+	-webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -49,7 +50,6 @@ ul {
 button,
 .button {
 	background-color: transparent;
-	-webkit-tap-highlight-color: transparent;
 }
 
 .light-mode {

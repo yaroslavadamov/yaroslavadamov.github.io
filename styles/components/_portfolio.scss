@@ -78,12 +78,6 @@
 				color: var(--color-bg-main);
 				background-color: var(--color-text-main);
 				border-radius: 30px;
-
-				@media (hover: hover) and (pointer: fine) {
-					&:hover {
-						text-decoration: underline;
-					}
-				}
 			}
 		}
 	}

@@ -116,13 +116,16 @@
   }
 }
 
-.a {
+.a.accent {
   color: var(--color-text-link);
 }
 @media (hover: hover) and (pointer: fine) {
   .a:hover {
     text-decoration: underline;
   }
+}
+.a:active {
+  text-decoration: underline;
 }
 
 .visually-hidden {
@@ -143,6 +146,7 @@
   padding: 0;
   transition-property: color, background-color, fill, outline-color;
   transition-duration: var(--color-mode-transition-duration);
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -177,7 +181,6 @@ ul {
 button,
 .button {
   background-color: transparent;
-  -webkit-tap-highlight-color: transparent;
 }
 
 .light-mode {
@@ -200,11 +203,6 @@ button,
   display: flex;
   flex-direction: row;
   gap: 24px;
-}
-@media (hover: hover) and (pointer: fine) {
-  .header__menu-link:hover {
-    text-decoration: underline;
-  }
 }
 .header__burger-button {
   display: none;
@@ -294,11 +292,6 @@ button,
 }
 .mobile-overlay-container .mobile-overlay__menu-item {
   margin-bottom: 24px;
-}
-@media (hover: hover) and (pointer: fine) {
-  .mobile-overlay-container .mobile-overlay__menu-link:hover {
-    text-decoration: underline;
-  }
 }
 .mobile-overlay-container.is-open {
   background-color: var(--color-mobile-overlay-bg);
@@ -392,11 +385,6 @@ button,
   background-color: var(--color-text-main);
   border-radius: 80px;
   text-align: center;
-}
-@media (hover: hover) and (pointer: fine) {
-  .hero__resume:hover {
-    text-decoration: underline;
-  }
 }
 .hero__resume svg path {
   fill: var(--color-bg-main);
@@ -725,11 +713,6 @@ button,
   background-color: var(--color-text-main);
   border-radius: 30px;
 }
-@media (hover: hover) and (pointer: fine) {
-  .portfolio__item-description-button:hover {
-    text-decoration: underline;
-  }
-}
 @media (max-width: 1024px) {
   .portfolio {
     margin-bottom: 70px;
@@ -831,11 +814,6 @@ button,
 }
 .contacts__item svg path {
   fill: var(--color-text-main);
-}
-@media (hover: hover) and (pointer: fine) {
-  .contacts__item a:hover {
-    text-decoration: underline;
-  }
 }
 @media (max-width: 1024px) {
   .contacts {

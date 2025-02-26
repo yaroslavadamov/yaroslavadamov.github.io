@@ -12,14 +12,6 @@
 			flex-direction: row;
 			gap: 24px;
 		}
-
-		&-link {
-			@media (hover: hover) and (pointer: fine) {
-				&:hover {
-					text-decoration: underline;
-				}
-			}
-		}
 	}
 
 	&__burger-button {

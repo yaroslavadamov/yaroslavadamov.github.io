@@ -75,11 +75,17 @@
 }
 
 .a {
-	color: var(--color-text-link);
+	&.accent {
+		color: var(--color-text-link);
+	}
 
 	@media (hover: hover) and (pointer: fine) {
 		&:hover {
 			text-decoration: underline;
 		}
+	}
+
+	&:active {
+		text-decoration: underline;
 	}
 }
