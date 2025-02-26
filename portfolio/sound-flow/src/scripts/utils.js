@@ -12,6 +12,5 @@ export function clamp(value, min = 0, max = 1) {
 
 
 export function preloadImage(src) {
-	console.log("Preload " + src);
 	const img = new Image().src = src;
 }
