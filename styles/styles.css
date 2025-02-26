@@ -697,6 +697,9 @@ button,
     transform: scale(1.04);
   }
 }
+.portfolio__item-cover div.sound-flow {
+  background-image: url(../media/images/portfolio-sound-flow.jpg);
+}
 .portfolio__item-cover div.mostream {
   background-image: url(../media/images/portfolio-mostream.jpg);
 }
