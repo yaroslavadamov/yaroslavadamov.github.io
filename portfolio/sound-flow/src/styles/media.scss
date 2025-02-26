@@ -1,0 +1,7 @@
+$screen-medium: 768px;
+
+@mixin screen-medium {
+	@media (max-width: $screen-medium) {
+		@content;
+	}
+}

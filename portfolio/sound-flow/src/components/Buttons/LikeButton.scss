@@ -1,0 +1,11 @@
+.like-button {
+	&.liked {
+		svg path {
+			fill: var(--color-accent);
+		}
+
+		&:active svg path {
+			fill: var(--color-accent-pressed);
+		}
+	}
+}

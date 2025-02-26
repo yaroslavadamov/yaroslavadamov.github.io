@@ -1,0 +1,11 @@
+@use '../../styles/media.scss';
+
+.subscribe-button {
+	padding: 3px 27px 0px;
+	height: 52px;
+	border-radius: 26px;
+
+	@include media.screen-medium {
+		height: 44px;
+	}
+}

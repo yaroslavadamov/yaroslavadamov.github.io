@@ -564,7 +564,7 @@ button,
 .about-me__content-text-cursor.blink {
   animation: cursor-blinking 2s ease infinite;
 }
-@media (max-width: 1080px) {
+@media (max-width: 1090px) {
   .about-me__content-line-numbers {
     text-align: right;
     width: 22px;

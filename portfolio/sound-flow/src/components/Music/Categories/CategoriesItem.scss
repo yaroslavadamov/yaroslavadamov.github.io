@@ -1,0 +1,39 @@
+.music__categories-item {
+	position: relative;
+
+	button {
+		width: max-content;
+		
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				color: var(--color-text-secondary-hover);
+			}
+		}
+
+		&:active {
+			color: var(--color-text-secondary-pressed);
+		}
+	}
+
+	&.is-active {
+		button {
+			color: var(--color-accent);
+		}
+
+		&:after {
+			background-color: var(--color-accent);
+		}
+	}
+
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: calc(100% + 30px);
+		height: 8px;
+		border-radius: 8px 8px 0 0;
+		bottom: -18px;
+		left: -15px;
+		transition: background-color var(--transition-duration);
+	}
+}

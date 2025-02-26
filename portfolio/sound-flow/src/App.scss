@@ -1,0 +1,28 @@
+@use "./styles/media.scss";
+
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding-block: 24px;
+	background-color: var(--color-bg-overlay);
+	border-bottom: 1px solid var(--color-devider);
+
+	@include media.screen-medium {
+		padding-block: 14px;
+
+		.logo {
+			height: 20px;
+		}
+	}
+}
+
+.footer {
+	padding-block: 24px;
+	border-top: 1px solid var(--color-devider);
+
+	&__content {
+		text-align: right;
+	}
+}

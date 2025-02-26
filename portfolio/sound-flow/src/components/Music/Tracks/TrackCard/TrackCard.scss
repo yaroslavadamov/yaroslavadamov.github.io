@@ -1,0 +1,83 @@
+.track-card {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	gap: 16px;
+	padding: 15px;
+	width: 100%;
+	max-width: 400px;
+	min-width: 320px;
+	background-color: var(--color-bg-overlay-accent);
+	border-right: 1px solid var(--color-devider);
+	border-radius: 24px 0px 0px 24px;
+
+	&__cover {
+		width: 86px;
+		aspect-ratio: 1 / 1;
+		flex: none;
+		transition: background-color var(--transition-duration);
+		background-blend-mode: multiply;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		border-radius: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&.is-playing {
+			background-color: rgba($color: black, $alpha: .7);
+		}
+	}
+
+	&__ui {
+		flex: 1;
+		padding-top: 4px;
+		display: flex;
+		flex-direction: column;
+
+		&-title {
+			margin-bottom: 2px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			width: auto;
+		}
+
+		&-subtitle {
+			flex: 1;
+		}
+
+		&-buttons {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		&-button-play {
+			gap: 9px;
+			padding-inline: 5px 14px;
+			height: 34px;
+			border-radius: 17px;
+
+			span {
+				margin-top: 2px;
+			}
+		}
+
+		&-download-like-wrapper {
+			display: flex;
+			flex-direction: row;
+			justify-content: end;
+			align-items: center;
+			gap: 18px;
+		}
+	}
+
+	@media (max-width: 800px) {
+		min-width: none;
+
+		background-color: transparent;
+		border: none;
+	}
+}

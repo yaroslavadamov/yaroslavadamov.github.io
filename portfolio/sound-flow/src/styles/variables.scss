@@ -1,0 +1,20 @@
+:root {
+	--container-width-max: 1440px;
+
+	/* Colors */
+	--color-bg-main: #141414;
+	--color-bg-gradient: var(--color-bg-main);
+	--color-bg-overlay: #0A0A0A33;
+	--color-bg-overlay-accent: #FFFFFF08;
+	--color-text-main: #FFFFFF;
+	--color-text-main-hover: #E6E6E6;
+	--color-text-main-pressed: #C2C2C2;
+	--color-text-secondary: #9E9E9E;
+	--color-text-secondary-hover: #C7C7C7;
+	--color-text-secondary-pressed: #EBEBEB;
+	--color-accent: #CE3CFF;
+	--color-accent-pressed: #B700F4;
+	--color-devider: #FFFFFF1A;
+
+	--transition-duration: .4s;
+}

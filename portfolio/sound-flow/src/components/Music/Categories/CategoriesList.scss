@@ -1,0 +1,28 @@
+.music__categories {
+	overflow-x: hidden;
+	overflow-x: scroll;
+	white-space: nowrap;
+	border-width: 1px 0;
+	border-style: solid;
+	border-color: var(--color-devider);
+	mask-image: linear-gradient(to right, transparent 10px, white 30px, white calc(100% - 30px), transparent calc(100% - 10px));
+
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	.music__categories-list {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		gap: 60px;
+		padding-block: 18px;
+
+		@media (max-width: 425px) {
+			gap: 42px;
+		}
+	}
+}

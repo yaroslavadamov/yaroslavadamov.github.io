@@ -1,0 +1,60 @@
+@use "./media.scss";
+@import url('https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap');
+
+.h1,
+.h2,
+.p,
+.p-small,
+.p-tiny {
+	font-family: 'Kufam', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	color: var(--color-text-main);
+	line-height: normal;
+	transition-property: color, background-color;
+	transition-duration: var(--transition-duration);
+
+	&.secondary {
+		color: var(--color-text-secondary);
+	}
+}
+
+.h1 {
+	font-size: 45px;
+	font-weight: 600;
+}
+
+.h2 {
+	font-size: 20px;
+	font-weight: 500;
+
+	&.adaptive {
+		@include media.screen-medium {
+			font-size: 18px;
+		}
+	}
+}
+
+.p {
+	font-size: 18px;
+
+	&.adaptive {
+		@include media.screen-medium {
+			font-size: 16px;
+		}
+	}
+}
+
+.p-small {
+	font-size: 16px;
+
+	&.adaptive {
+		@include media.screen-medium {
+			font-size: 14px;
+		}
+	}
+}
+
+.p-tiny {
+	font-size: 12px;
+}

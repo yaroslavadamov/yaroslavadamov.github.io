@@ -1,0 +1,77 @@
+.timeline {
+	&__time {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 7px;
+	}
+
+	&__progressbar {
+		height: 20px;
+		position: relative;
+		margin-bottom: 28px;
+		cursor: pointer;
+
+		&-total {
+			position: absolute;
+			width: calc(100% - 4px);
+			height: 6px;
+			left: 2px;
+			top: 7px;
+			background-color: var(--color-text-secondary);
+		}
+
+		&-current {
+			position: absolute;
+			width: 50%;
+			height: 8px;
+			top: 6px;
+			background-color: var(--color-accent);
+			border-radius: 3px 0 0 3px;
+		}
+
+		&-dot {
+			position: absolute;
+			--width: 20px;
+			width: var(--width);
+			aspect-ratio: 1 / 1;
+			background-color: var(--color-accent);
+			border-radius: 10px;
+			transform: scale(0);
+			transition: transform .1s;
+
+			&.rewind {
+				transform: none;
+			}
+		}
+
+		@media (hover: hover) and (pointer: fine) {
+			&:hover &-dot {
+				transform: none;
+			}
+		}
+	}
+
+	@media (max-width: 950px) {
+		&__time span {
+			font-size: 16px;
+		}
+
+		&__progressbar {
+			&-total {
+				height: 4px;
+				top: 8px;
+			}
+
+			&-current {
+				height: 6px;
+				top: 7px;
+			}
+
+			&-dot {
+				--width: 16px;
+				top: 2px;
+			}
+		}
+	}
+}

@@ -1,0 +1,125 @@
+@use './media.scss';
+
+.visually-hidden {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	margin: -1px !important;
+	border: 0 !important;
+	padding: 0 !important;
+	white-space: nowrap !important;
+	clip-path: inset(100%) !important;
+	clip: rect(0 0 0 0) !important;
+	overflow: hidden !important;;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	user-select: none;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	width: auto;
+	overflow-x: hidden;
+	min-height: 100vh;
+	background-color: var(--color-bg-main);
+	background-image: radial-gradient(ellipse 50% 900px at 50% 100px, var(--color-bg-gradient) 0%, var(--color-bg-main) 100%);
+	background-size: 175% auto;
+	background-position-x: center;
+	background-repeat: no-repeat;
+}
+
+.container {
+	max-width: var(--container-width-max);
+	margin-inline: auto;
+	padding-inline: min(6.94%, 100px);
+
+	@include media.screen-medium {
+		padding-inline: 6.4%;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+ul {
+	list-style-type: none;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	line-height: 0;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.button {
+	svg {
+		path {
+			transition: fill var(--transition-duration);
+		}
+	}
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover svg path {
+			fill: var(--color-text-main-hover);
+		}
+	}
+
+	&:active svg path {
+		fill: var(--color-text-main-pressed);
+	}
+
+	&.inactive {
+		svg path {
+			fill: var(--color-text-secondary);
+		}
+
+		@media (hover: hover) and (pointer: fine) {
+			&:hover svg path {
+				fill: var(--color-text-secondary-hover);
+			}
+		}
+	
+		&:active svg path {
+			fill: var(--color-text-secondary-pressed);
+		}
+	}
+
+	&-accent {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		border: 2px solid var(--color-accent);
+
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				background-color: var(--color-accent);
+			}
+		}
+	
+		&:active {
+			background-color: var(--color-accent-pressed);
+		}
+	}
+}
+
+a.button {
+	display: block;
+	line-height: 0;
+}

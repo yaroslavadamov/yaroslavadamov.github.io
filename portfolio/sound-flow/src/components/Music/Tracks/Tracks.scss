@@ -1,0 +1,28 @@
+.music__tracks {
+	padding-block: 40px 60px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-items: center;
+	gap: 24px 32px;
+
+	&-empty {
+		padding-block: 100px;
+
+		p {
+			text-align: center;
+			max-width: 470px;
+			padding-inline: 10px;
+			margin-inline: auto;
+			line-height: 1.5;
+		}
+	}
+
+	@media (max-width: 1200px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media (max-width: 800px) {
+		padding-top: 28px;
+		grid-template-columns: 1fr;
+	}
+}
