@@ -6,6 +6,7 @@ import SubscribeButton from './components/Buttons/SubscribeButton.jsx';
 import Player from './components/Player/Player.jsx';
 import Music from './components/Music/Music.jsx';
 import SubscribePopUp from './components/SubscribePopUp/SubscribePopUp.jsx';
+import { preloadImage } from './scripts/utils.js';
 
 
 export default function App() {
@@ -29,6 +30,11 @@ export default function App() {
 	const audioRef = useRef(new Audio(getAudioUrl()));
 	const intervalRef = useRef();
 
+	useEffect(() => {
+		preloadImage(MUSIC[getTrackId(playingPlaylist, 1)].coverImageURL);
+	}, [])
+
+	// Set background
 	function getTrackBackgroundColor(id = getTrackId()) {
 		return MUSIC[id].backgroundColor;
 	}
@@ -39,6 +45,7 @@ export default function App() {
 
 	setBackgroundColor(getTrackBackgroundColor(getTrackId()));
 
+	// Like
 	function handleLike(trackId) {
 		let index = favoritesListSource.indexOf(trackId);
 		if (index === -1) {
@@ -51,10 +58,12 @@ export default function App() {
 		setFavoritesList([...favoritesListSource]);
 	}
 
+	// Shuffle
 	function handleShuffle() {
 		setIsShuffled(!isShuffled);
 	}
 
+	// Play pause
 	function handlePlayPause() {
 		setIsPlaying(!isPlaying);
 	}
@@ -71,21 +80,30 @@ export default function App() {
 		setIsLooped(!isLooped);
 	}
 
+	// Play selected track
 	function handlePlayAudio(playlist, trackIndex) {
 		audioRef.current.pause();
 		setTrackProgress(0);
+
 		setPlayingPlaylist(playlist);
 		setTrackIndex(trackIndex);
 		audioRef.current = new Audio(getAudioUrl(getTrackId(playlist, trackIndex)));
 		audioRef.current.play();
 		setIsPlaying(true);
+
 		setBackgroundColor(getTrackBackgroundColor(getTrackId(playlist, trackIndex)));
+
+		if (trackIndex != PLAYLISTS[playlist].length - 1) {
+			preloadImage(MUSIC[getTrackId(playlist, trackIndex + 1)].coverImageURL);
+		}
 	}
 
+	// Previous track
 	function handlePreviousTrack() {
 		handlePlayAudio(playingPlaylist, trackIndex - 1);
 	}
 
+	// Next track
 	function handleNextTrack() {
 		if (trackIndex === PLAYLISTS[playingPlaylist].length - 1) {
 			setIsPlaying(false);
@@ -94,6 +112,7 @@ export default function App() {
 		}
 	}
 
+	// Timer that updates the timeline and handles the end of the track
 	function startTimer() {
 		clearInterval(intervalRef.current);
 		intervalRef.current = setInterval(() => {
@@ -122,11 +141,13 @@ export default function App() {
 	
 	startTimer();
 
+	// Rewind audio
 	function handleRewindAudio(pos) {
 		audioRef.current.currentTime = audioRef.current.duration * pos;
 		setTrackProgress(audioRef.current.currentTime);
 	}
 
+	// Controlers
 	const audioControls = {
 		playingPlaylist,
 		setPlayingPlaylist,
@@ -148,6 +169,7 @@ export default function App() {
 		handlePlayAudio,
 		handleRewindAudio,
 	}
+
 
 	return (
 		<>

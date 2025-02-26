@@ -5,6 +5,13 @@ export function timeFormating(time) {
 	return min + ':' + (sec < 10 ? '0' + sec : sec);
 }
 
+
 export function clamp(value, min = 0, max = 1) {
 	return Math.min(Math.max(value, min), max);
+}
+
+
+export function preloadImage(src) {
+	console.log("Preload " + src);
+	const img = new Image().src = src;
 }

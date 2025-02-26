@@ -16,7 +16,7 @@ export default function CategoriesItem({index, name, activePlaylist, setActivePl
 				inline: 'center'
 			});
 		})
-	});
+	}, []);
 
 	return(
 		<li className={"music__categories-item" + ((index === activePlaylist) ? " is-active" : "")}>

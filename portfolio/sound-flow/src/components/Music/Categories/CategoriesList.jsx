@@ -31,7 +31,7 @@ export default function CategoriesList({activePlaylist, setActivePlaylist}) {
 			const walk = (x - startX);
 			elemRef.current.scrollLeft = scrollLeft - walk;
 		});
-	});
+	}, []);
 
 
 	return(

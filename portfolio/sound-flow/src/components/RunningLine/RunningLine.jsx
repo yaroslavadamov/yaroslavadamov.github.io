@@ -1,5 +1,4 @@
 import './RunningLine.scss';
-import { useEffect, useRef } from 'react';
 
 export default function RunningLine({className, children}) {
 	return (
