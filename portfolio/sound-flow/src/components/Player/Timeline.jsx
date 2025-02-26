@@ -23,8 +23,14 @@ export default function Timeline({audioControls}) {
 		setRewindPosition(calculateRewindPosition(event));
 	}
 
+
 	function handleMouseDown(event) {
 		handleSetRewindPosition(event);
+		setRewind(true);
+	}
+
+	function handleTouchStart(event) {
+		handleSetRewindPosition(event.touches[0]);
 		setRewind(true);
 	}
 
@@ -33,19 +39,33 @@ export default function Timeline({audioControls}) {
 			handleSetRewindPosition(event);
 		};
 
+		function handleTouchMove(event) {
+			handleSetRewindPosition(event.touches[0]);
+		};
+
 		function handleMouseUp(event) {
 			audioControls.handleRewindAudio(calculateRewindPosition(event));
 			setRewind(false);
 		}
 
+		function handleTouchEnd(event) {
+			console.log(event);
+			audioControls.handleRewindAudio(calculateRewindPosition(event.changedTouches[0]));
+			setRewind(false);
+		}
+
 		if (rewind) {
-			window.addEventListener("mouseup", handleMouseUp);
 			window.addEventListener("mousemove", handleMouseMove);
+			window.addEventListener("mouseup", handleMouseUp);
+			window.addEventListener("touchmove", handleTouchMove, {passive: false});
+			window.addEventListener("touchend", handleTouchEnd);
 		}
 
 		return () => {
-			window.removeEventListener("mouseup", handleMouseUp);
 			window.removeEventListener("mousemove", handleMouseMove);
+			window.removeEventListener("mouseup", handleMouseUp);
+			window.removeEventListener("touchmove", handleTouchMove);
+			window.removeEventListener("touchend", handleTouchEnd);
 		};
 	}, [rewind]);
 
@@ -61,6 +81,7 @@ export default function Timeline({audioControls}) {
 			<div
 				className="timeline__progressbar"
 				onMouseDown={handleMouseDown}
+				onTouchStart={handleTouchStart}
 				ref={elemRef}
 			>
 				<div
