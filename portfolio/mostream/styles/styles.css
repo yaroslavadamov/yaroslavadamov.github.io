@@ -1008,22 +1008,4 @@ body {
   background-image: url(../icons/social-tiktok.svg);
 }
 
-.trailer-dialog {
-  margin: auto;
-  border: none;
-  background-color: transparent;
-}
-.trailer-dialog video {
-  display: block;
-  width: min(1280px, min(80vw, 142.2222222222svh));
-  border-radius: 10px;
-  border: 1px solid var(--color-danger-main);
-  background-color: black;
-  padding: 12px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
-}
-.trailer-dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
 /*# sourceMappingURL=styles.css.map */
